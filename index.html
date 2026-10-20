@@ -3,133 +3,134 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#fff0f5">
 <title>Sweet Chels-A-Rita ❤️</title>
 <style>
-* { box-sizing: border-box; }
-body {
-  margin: 0; min-height: 100vh; min-height: 100dvh;
-  display: flex; align-items: center; justify-content: center;
-  padding: 22px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #71304b; text-align: center; overflow-x: hidden;
-  background: linear-gradient(145deg,#fff0f5,#ffe0e9,#fff7fb);
-}
-.card {
-  width: 100%; max-width: 440px; padding: 32px 20px;
-  border: 1px solid #ffffffcc; border-radius: 30px;
-  background: #ffffffb8;
-  box-shadow: 0 18px 55px #b84d7020;
-}
-.kicker {
-  color: #c15a7c; font-size: 12px; font-weight: 800;
-  letter-spacing: 3px; text-transform: uppercase;
-}
-h1 { font-size: clamp(29px,8vw,39px); line-height: 1.15; margin: 14px 0; }
-.subtitle { color: #9b6076; font-size: 16px; line-height: 1.6; }
-.heart { font-size: 76px; margin: 8px 0; animation: pulse 1.3s infinite; }
-@keyframes pulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.12); }
-}
-.stage {
-  position: relative; height: 145px; margin-top: 20px;
-  display: flex; align-items: center; justify-content: center;
-  gap: 14px; overflow: hidden;
-}
-button {
-  border: 0; border-radius: 999px; padding: 15px 27px;
-  min-width: 104px; font-size: 17px; font-weight: 800;
-  cursor: pointer; -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-#yes { background: #e75480; color: white; box-shadow: 0 7px 18px #e7548045; }
-#no { background: white; color: #a45c76; border: 1px solid #f0cada; }
-#message { display: none; animation: appear .65s ease both; }
-#message h2 { color: #d94375; font-size: 31px; margin: 8px 0; }
-.love-note { line-height: 1.8; font-size: 17px; color: #87435f; }
-.signature { margin-top: 18px; font-weight: 800; color: #c34b76; }
-@keyframes appear {
-  from { opacity: 0; transform: translateY(12px) scale(.96); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-.sparkle { position: fixed; top: -30px; pointer-events: none; animation: fall linear forwards; }
-@keyframes fall {
-  to { transform: translateY(110vh) rotate(360deg); opacity: .15; }
-}
-footer { font-size: 12px; color: #c18aa0; margin-top: 20px; }
+:root{--pink:#f7b7cc;--deep:#b73567;--cream:#fffaf7;--ink:#573746;--rose:#ffe0eb}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(160deg,#fff6f9,#ffe8f0 55%,#fffaf5);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+main{width:min(760px,100%);margin:auto;padding:20px 16px 56px}
+.hero{text-align:center;padding:38px 16px 30px}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:600 .72rem Arial,sans-serif;color:#b45a7b}
+h1{font-size:clamp(2.4rem,9vw,4.5rem);line-height:1.05;margin:12px 0;color:#b73567}
+.subtitle{font-style:italic;font-size:1.1rem;margin:14px auto 0;max-width:480px}
+.heart{color:#d94f83}
+.card{background:rgba(255,255,255,.83);border:1px solid #f6c9d9;border-radius:24px;padding:24px;margin:18px 0;box-shadow:0 10px 30px rgba(183,53,103,.08)}
+h2{color:#b73567;font-size:1.55rem;line-height:1.2;margin:0 0 14px}
+.center{text-align:center}
+.big-heart{font-size:2.5rem}
+.storyline{display:grid;grid-template-columns:62px 1fr;gap:14px;margin:18px 0;align-items:start}
+.year{background:#ffe0eb;color:#a42f60;border-radius:14px;text-align:center;padding:8px 4px;font-weight:bold}
+.storyline p{margin:3px 0}
+.letter{font-size:1.08rem}
+.letter p{margin:0 0 14px}
+.divider{text-align:center;color:#dc7b9f;letter-spacing:.45em;margin:14px 0}
+button{font:600 1rem Arial,sans-serif;border:0;border-radius:999px;padding:13px 24px;cursor:pointer;touch-action:manipulation}
+.yes{background:#c43e72;color:white;box-shadow:0 5px 14px #e8a3bc}
+.no{background:#fff0f5;color:#9d3a62;border:1px solid #efbfd0}
+.buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:62px}
+#answer{display:none;margin-top:22px;color:#b73567;font-size:1.2rem;font-weight:bold}
+#answer .huge{display:block;font-size:5rem;line-height:1.3;animation:pulse 1s infinite alternate}
+#message{min-height:3.2em;font-style:italic;font-size:1.15rem;color:#a13b64}
+footer{text-align:center;font-size:.9rem;color:#9d657a;padding:16px}
+.spark{position:fixed;top:-24px;pointer-events:none;z-index:5;animation:fall 3.5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
+@keyframes pulse{to{transform:scale(1.12)}}
+@media(min-width:600px){main{padding-top:30px}.card{padding:30px}}
 </style>
 </head>
 <body>
-<main class="card">
-  <div class="kicker">A very important question 💌</div>
-  <div class="heart">💗</div>
-  <h1>Are you my<br>Sweet Chels-A-Rita?</h1>
-  <p class="subtitle">Choose wisely, beautiful. There is definitely a right answer. 😘</p>
+<main>
+<header class="hero">
+<div class="eyebrow">A little love note, just for you</div>
+<h1>Sweet Chels-A-Rita <span class="heart">♥</span></h1>
+<p class="subtitle">My favorite person, my partner, and my home.</p>
+<div class="big-heart">💕</div>
+</header>
 
-  <div class="stage" id="stage">
-    <button id="yes">YES! 💖</button>
-    <button id="no">No 🙃</button>
-  </div>
+<section class="card center">
+<h2>A little reminder</h2>
+<p id="message">Out of all the things life could have given me, I’m grateful it gave me you.</p>
+<button class="yes" onclick="nextMessage()">One more sweet thought 💌</button>
+</section>
 
-  <section id="message" aria-live="polite">
-    <div class="heart">❤️</div>
-    <h2>I LOVE YOU!</h2>
-    <p class="love-note">
-      You're my Sweet Chels-A-Rita, my favorite person,
-      and the one I would choose all over again. ❤️<br><br>
-      No matter what life throws at us, there's nobody else
-      I'd rather do it with. You mean more to me than I
-      could ever fit on this little screen.
-    </p>
-    <div class="signature">Forever your guy. 💋</div>
-  </section>
-  <footer>Made with love, just for you ❤️</footer>
+<section class="card">
+<h2>Our little story ✨</h2>
+<div class="storyline">
+<div class="year">2014</div>
+<div><strong>The beginning</strong><p>A boy from Florida met a girl from North Carolina, and life started writing a story neither of us could have imagined.</p></div>
+</div>
+<div class="storyline">
+<div class="year">2015</div>
+<div><strong>Choosing forever</strong><p>We got married and started building a life together—one full of memories, lessons, laughter, and love.</p></div>
+</div>
+<div class="storyline">
+<div class="year">❤️</div>
+<div><strong>Our favorite chapter</strong><p>Somehow, we ended up with a little girl from Tennessee. Addi made our story bigger, brighter, and more meaningful.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>For you, Chelsey ❤️</h2>
+<div class="letter">
+<p>Chelsey, ❤️</p>
+<p>I love you, and I’m happy to be with you. I appreciate you and the family we have together more than you know.</p>
+<p>You and Addi are the most important people in my life. I’m so grateful for you and Addi, and for the life and family we share.</p>
+<p>A boy from Florida met a girl from North Carolina, and somehow, we ended up with a little girl from Tennessee. ❤️ And I wouldn’t trade our little family for anything.</p>
+<p>I love you, my Sweet Chels-A-Rita. ❤️</p>
+</div>
+<div class="divider">♥ ♥ ♥</div>
+<p class="center"><em>Always us. Always our little family.</em></p>
+</section>
+
+<section class="card center" id="question">
+<div class="big-heart">💗</div>
+<h2>One very important question…</h2>
+<p>Are you my Sweet Chels-A-Rita?</p>
+<div class="buttons">
+<button class="yes" onclick="sayYes()">YES! 💖</button>
+<button class="no" id="noButton" onclick="runAway()" onpointerenter="runAway()">NO 🙈</button>
+</div>
+<div id="answer"><span class="huge">❤️</span>I love you, Chelsey!<br>More than this little website could ever say. 💕</div>
+</section>
+
+<footer>Made with love, for my Sweet Chels-A-Rita. ❤️<br>From your favorite boy from Florida.</footer>
 </main>
-
 <script>
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
-const stage = document.getElementById('stage');
-const message = document.getElementById('message');
-
-function dodge() {
-  const maxX = Math.max(0, stage.clientWidth - no.offsetWidth);
-  const maxY = Math.max(0, stage.clientHeight - no.offsetHeight);
-  no.style.position = 'absolute';
-  no.style.left = Math.random() * maxX + 'px';
-  no.style.top = Math.random() * maxY + 'px';
+const messages=[
+"Out of all the things life could have given me, I’m grateful it gave me you.",
+"You and Addi are my favorite part of this life.",
+"I wouldn’t trade our little family for anything. ❤️",
+"No matter how busy life gets, you will always be my Sweet Chels-A-Rita.",
+"My favorite story will always be the one where I found you."
+];
+let messageIndex=0;
+function nextMessage(){
+messageIndex=(messageIndex+1)%messages.length;
+document.getElementById('message').textContent=messages[messageIndex];
 }
-no.addEventListener('pointerdown', function(e) {
-  e.preventDefault();
-  dodge();
-});
-no.addEventListener('click', function(e) {
-  e.preventDefault();
-  dodge();
-});
-
-yes.addEventListener('click', function() {
-  stage.style.display = 'none';
-  document.querySelector('.subtitle').style.display = 'none';
-  document.querySelector('main .kicker').textContent = 'You just made my heart happy';
-  document.querySelector('main > h1').style.display = 'none';
-  document.querySelector('main > .heart').style.display = 'none';
-  message.style.display = 'block';
-  for (let i = 0; i < 32; i++) {
-    setTimeout(() => {
-      const s = document.createElement('span');
-      s.className = 'sparkle';
-      s.textContent = ['❤️','💗','💕','✨','💖'][Math.floor(Math.random()*5)];
-      s.style.left = Math.random()*100 + 'vw';
-      s.style.fontSize = (16+Math.random()*22) + 'px';
-      s.style.animationDuration = (3+Math.random()*4) + 's';
-      document.body.appendChild(s);
-      setTimeout(() => s.remove(), 7500);
-    }, i*90);
-  }
-});
+function runAway(){
+const b=document.getElementById('noButton');
+const dx=(Math.random()>.5?1:-1)*(30+Math.random()*70);
+b.style.transform='translate('+dx+'px,'+(Math.random()>.5?-18:18)+'px)';
+b.textContent=['NO 🙈','Nice try! 💕','Nope! 😘','Try YES! 💗'][Math.floor(Math.random()*4)];
+}
+function sayYes(){
+document.getElementById('answer').style.display='block';
+document.getElementById('noButton').style.display='none';
+document.querySelector('#question .yes').textContent='I LOVE YOU TOO! ❤️';
+for(let i=0;i<36;i++){
+const s=document.createElement('span');
+s.className='spark';
+s.textContent=['💗','❤️','💕','✨','💖'][Math.floor(Math.random()*5)];
+s.style.left=Math.random()*100+'vw';
+s.style.animationDelay=Math.random()*1.5+'s';
+s.style.fontSize=(16+Math.random()*22)+'px';
+document.body.appendChild(s);
+setTimeout(()=>s.remove(),4500);
+}
+}
 </script>
 </body>
 </html>
